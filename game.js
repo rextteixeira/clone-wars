@@ -92,14 +92,14 @@ try { bestScore = parseInt(localStorage.getItem('cloneWarsBest'), 10) || 0; } ca
 function soundLine() { return 'Press M to turn sound ' + (muted ? 'on.' : 'off.'); }
 function showReady() {
   overlayTitle.textContent = CONFIG.title;
-  overlayText.textContent = ['Press Space, click or tap to start.', soundLine()].join('\\n');
+  overlayText.textContent = ['Press Space, click or tap to start.', soundLine()].join('\n');
   overlay.hidden = false;
 }
 function showGameOver() {
   overlayTitle.textContent = 'Game over';
   const lines = ['Score ' + score + '   ·   Best ' + bestScore, 'Press Space, click or tap to play again.', soundLine()];
   if (checkpoint > 0) lines.splice(1, 0, 'Next game starts at checkpoint ' + checkpoint + '.');
-  overlayText.textContent = lines.join('\\n');
+  overlayText.textContent = lines.join('\n');
   overlay.hidden = false;
 }
 function startGame() {
